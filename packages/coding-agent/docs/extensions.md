@@ -1703,7 +1703,7 @@ Typical `sourceInfo.source` values:
 
 ### pi.setModel(model)
 
-Set the current model. Returns `false` if no API key is available for the model. See [models.md](models.md) for configuring custom models.
+Set the current model for the current session. Returns `false` if no API key is available for the model. The change is recorded in the session transcript, but does not update the startup default in settings.json. See [models.md](models.md) for configuring custom models.
 
 ```typescript
 const model = ctx.modelRegistry.find("anthropic", "claude-sonnet-4-5");
